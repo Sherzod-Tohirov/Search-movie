@@ -19,11 +19,11 @@ elForm.addEventListener('submit', (evt) => {
 
 
    if(elSelectInput.value.trim().length > 0) {
-     getData(`http://www.omdbapi.com/?s=${elSearchInput.value.trim()}&apikey=${API_KEY}&type=${elSelectInput.value.trim()}`);
+     getData(`https://www.omdbapi.com/?s=${elSearchInput.value.trim()}&apikey=${API_KEY}&type=${elSelectInput.value.trim()}`);
      return;
    }
 
-   getData(`http://www.omdbapi.com/?s=${elSearchInput.value.trim()}&apikey=${API_KEY}`);
+   getData(`https://www.omdbapi.com/?s=${elSearchInput.value.trim()}&apikey=${API_KEY}`);
 
 });
 
@@ -38,7 +38,7 @@ function load_more() {
              elLoadMoreBtn.addEventListener('click', (evt) => {
                  elLoadMoreBtn.parentElement.remove();
                  ++page_counter;
-                 getData(`http://www.omdbapi.com/?s=${elSearchInput.value.trim()}&apikey=${API_KEY}&page=${page_counter}`, false);
+                 getData(`https://www.omdbapi.com/?s=${elSearchInput.value.trim()}&apikey=${API_KEY}&page=${page_counter}`, false);
                  
                  loaded_items += 10;
              });
@@ -141,7 +141,7 @@ function renderData(data, list, clear = true) {
     
 
     // If more items, create load more button
-    
+
     if(data.totalResults > loaded_items) {
         
         const liElement2 = document.createElement("li");
