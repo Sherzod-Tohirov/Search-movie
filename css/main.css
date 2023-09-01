@@ -1,0 +1,279 @@
+
+/*Html value for sticky footer*/
+
+
+html {
+  height: 100%;
+}
+
+
+
+/*Box element property*/
+
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.visually-hidden {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: none;
+    visibility: hidden;
+    clip-path: rect(0, 0, 0, 0);
+}
+
+
+/*Defauly body properties*/
+
+body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #ee4e34;
+}
+
+
+/*Default image properties*/
+
+img {
+  display: block;
+  height: auto;
+}
+
+/*Visually hidden class */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+}
+
+
+/*Platform container */
+
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.title {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 120%;
+    letter-spacing: 0.8px;
+    text-align: center;
+    color: #fcedda;
+}
+
+.site-form__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.site-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.site-form__input {
+    max-width: 160px;
+    width: 100%;
+    padding: 10px 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
+.site-form__input:first-child {
+    max-width: 220px;
+}
+
+.site-form__btn {
+    max-width: 120px;
+    width: 100%;
+    padding: 13px 10px 12px 9px;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: #000;
+   
+    cursor: pointer;
+    transition: background-color 0.4s ease,
+        color 0.4s ease; 
+}
+
+
+.site-form__btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
+    align-items: stretch;
+    place-content: center;
+    gap: 40px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.list__item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #fcedda;
+    border-radius: 10px;
+}
+
+.list__img-wrapper {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.list__img {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.list__img:hover {
+    transform: scale(1.1);
+}
+
+.list__link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background-color: #ee4e34;
+    border-radius: 50%;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.4s ease;
+}
+
+.list__link:hover {
+    opacity: 0.8;
+}
+
+.list__link:active {
+    opacity: 0.6;
+}
+
+.list__item-details {
+    align-self: flex-start;
+    width: 100%;
+}
+
+.list__item-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: center;
+}
+
+.list__item-inner {
+   
+}
+
+.list__item-desc {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+
+.list__item-desc span {
+    font-weight: 500;
+}
+
+.error {
+    border-color:#ff0000;
+}
+
+.error::placeholder {
+    color: #ff0000 !important;
+}
+
+.list__no-movie-desc {
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 150%;
+    text-align: center;
+}
+
+.list__load-btn {
+    min-width: 140px;
+    padding: 16px 24px;
+    font-weight: 500;
+    font-size: 18px;
+    color:#fff;
+    border: none;
+    border-radius: 10px;
+    background-color:#ee4e34;
+    cursor: pointer;
+    transition: opacity 0.4s ease;
+}
+
+.list__load-btn:hover {
+    opacity: 0.8;
+}
+
+.list__load-btn:active {
+    opacity: 0.6;
+}

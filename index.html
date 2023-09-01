@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMDB List</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <h1 class="title" title="Search your favourite movie">
+                Search your favourite movie
+            </h1>
+            <div class="site-form__wrapper">
+                <form class="site-form js-form">
+                    <input class="site-form__input site-form__input--search js-search" type="search" name="user_search" placeholder="Search here..." aria-label="Enter your search">
+                    <select class="site-form__input js-select" name="site-form__select">
+                        <option value="" hidden>Choose type</option>
+                        <option value="Movie">Movie</option>
+                        <option value="Series">Series</option>
+                        <option value="Episode">Episode</option>
+                    </select>
+                    <button class="site-form__btn" type="submit">Search</button>
+                </form>
+            </div>
+            <h2 class="visually-hidden">OMDB API</h2>
+            <ul class="list js-list">
+                <p class="list__no-movie-desc">No movie yet !</p>
+            </ul>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
